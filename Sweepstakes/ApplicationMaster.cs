@@ -16,7 +16,7 @@ namespace Sweepstakes
 
         public void ManageAllSweepstakes()
         {
-            switch (UI.PromptForSweepstakesManagementChoice())
+            switch (UI.PromptForAllSweepstakesManagementChoice())
             {
                 case "1":
                     ManageCurrentSweepstakes(firm);

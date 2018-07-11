@@ -20,7 +20,7 @@ namespace Sweepstakes
             return Console.ReadLine();
         }
 
-        public static string PromptForSweepstakesManagementChoice()
+        public static string PromptForAllSweepstakesManagementChoice()
         {
             Console.WriteLine("1. Manage Current Sweepstakes/n2. Create New Sweepstakes");
             return Console.ReadLine();
