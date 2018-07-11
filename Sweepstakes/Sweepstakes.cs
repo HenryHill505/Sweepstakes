@@ -8,9 +8,9 @@ namespace Sweepstakes
 {
     public class Sweepstakes
     {
-        string name;
-        Dictionary<int, Contestant> contestants;
-        Random randomizer;
+        public string name;
+        public Dictionary<int, Contestant> contestants;
+        public Random randomizer;
 
         public Sweepstakes(string name)
         {

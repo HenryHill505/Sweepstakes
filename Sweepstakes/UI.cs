@@ -40,13 +40,13 @@ namespace Sweepstakes
 
         public static string PromptForAllSweepstakesManagementChoice()
         {
-            Console.WriteLine("1. Manage Current Sweepstakes/n2. Create New Sweepstakes");
+            Console.WriteLine("1. Manage Current Sweepstakes\n2. Create New Sweepstakes");
             return Console.ReadLine();
         }
 
         public static string PromptForCurrentSweepstakesManagementChoice()
         {
-            Console.WriteLine("1. Register New Contestant/n2. DisplayContestantInfo/n3. Pick Winner");
+            Console.WriteLine("1. Register New Contestant\n2. DisplayContestantInfo\n3. Pick Winner");
             return Console.ReadLine();
         }
     }

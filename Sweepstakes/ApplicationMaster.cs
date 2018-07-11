@@ -34,6 +34,7 @@ namespace Sweepstakes
                 default:
                     break;
             }
+            ManageAllSweepstakes();
         }
 
         public void ManageCurrentSweepstakes(MarketingFirm firm)
@@ -43,15 +44,20 @@ namespace Sweepstakes
             {
                 case "1":
                     //Register New Contestant
-                    Contestant contestant = new Contestant();
-                    contestant.firstName = UI.PromptForContestantFirstName();
-                    contestant.lastName = UI.PromptForContestantLastName();
-                    contestant.emailAddress = UI.PromptForContestantEmail();
-                    sweepstakes.RegisterContestant(contestant);
+                    {
+                        Contestant contestant = new Contestant();
+                        contestant.firstName = UI.PromptForContestantFirstName();
+                        contestant.lastName = UI.PromptForContestantLastName();
+                        contestant.emailAddress = UI.PromptForContestantEmail();
+                        sweepstakes.RegisterContestant(contestant);
+                    }
                     break;
                 case "2":
                     //Display Contestant Info
-                    
+                    foreach (Contestant contestant in sweepstakes.contestants.Values)
+                    {
+                        sweepstakes.PrintContestantInfo(contestant);
+                    }
                     break;
                 case "3":
                     // Pick Winner
