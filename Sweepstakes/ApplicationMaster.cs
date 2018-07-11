@@ -61,7 +61,8 @@ namespace Sweepstakes
                     break;
                 case "3":
                     // Pick Winner
-                    sweepstakes.PickWinner();
+                    Console.WriteLine(sweepstakes.PickWinner());
+                    Console.ReadLine();
                     break;
                 default:
                     break;
