@@ -10,5 +10,9 @@ namespace Sweepstakes
     {
         void InsertSweepstakes(Sweepstakes sweepstakes);
         Sweepstakes GetSweepstakes();
+        int Count
+        {
+            get;
+        }
     }
 }

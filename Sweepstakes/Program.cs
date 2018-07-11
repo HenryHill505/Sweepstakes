@@ -11,6 +11,7 @@ namespace Sweepstakes
         static void Main(string[] args)
         {
             ApplicationMaster app = new ApplicationMaster(new MarketingFirm(SweepstakesManagerFactory.CreateSweepstakesManager(UI.PromptForSweepstakesManager())));
+            app.ManageAllSweepstakes();
         }
     }
 }

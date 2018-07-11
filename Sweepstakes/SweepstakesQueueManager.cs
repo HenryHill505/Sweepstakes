@@ -10,6 +10,14 @@ namespace Sweepstakes
     {
         Queue<Sweepstakes> sweepstakesQueue = new Queue<Sweepstakes>();
 
+        public int Count
+        {
+            get
+            {
+                return sweepstakesQueue.Count;
+            }
+        }
+
         public void InsertSweepstakes(Sweepstakes sweepstakes)
         {
             sweepstakesQueue.Enqueue(sweepstakes);
