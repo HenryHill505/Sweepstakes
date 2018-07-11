@@ -19,7 +19,14 @@ namespace Sweepstakes
             switch (UI.PromptForAllSweepstakesManagementChoice())
             {
                 case "1":
-                    ManageCurrentSweepstakes(firm);
+                    if (firm.sweepstakesManager.Count > 0)
+                    {
+                        ManageCurrentSweepstakes(firm);
+                    }
+                    else
+                    {
+                        Console.WriteLine("There are currently no sweepstakes. Please create a sweepstakes");
+                    }
                     break;
                 case "2":
                     firm.sweepstakesManager.InsertSweepstakes(new Sweepstakes(UI.PromptForSweepstakesName()));
