@@ -13,5 +13,18 @@ namespace Sweepstakes
         {
             this.firm = firm;
         }
+
+        public void ManageSweepStakes()
+        {
+            switch (UI.PromptForSweepstakesManagementChoice())
+            {
+                case "1":
+                    break;
+                case "2":
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }
