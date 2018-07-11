@@ -8,5 +8,10 @@ namespace Sweepstakes
 {
     public class UI
     {
+        public string PromptForSweepstakesManager()
+        {
+            Console.WriteLine("Would you like to organize your sweepstakes into a stack or a queue?");
+            return Console.ReadLine();
+        }
     }
 }

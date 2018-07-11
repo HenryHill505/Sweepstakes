@@ -17,7 +17,7 @@ namespace Sweepstakes
                 case "Stack":
                     return new SweepstakesStackManager();
                 default:
-                    Console.WriteLine("Entered invalid sweepstakes manager type. Enter Stack or Queue");
+                    Console.WriteLine("Entered invalid sweepstakes manager type. Enter stack or queue");
                     return CreateSweepstakesManager(Console.ReadLine());
             }
         }
