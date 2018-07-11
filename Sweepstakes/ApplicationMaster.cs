@@ -14,12 +14,12 @@ namespace Sweepstakes
             this.firm = firm;
         }
 
-        public void ManageAllSweepStakes()
+        public void ManageAllSweepstakes()
         {
             switch (UI.PromptForSweepstakesManagementChoice())
             {
                 case "1":
-                    ManageCurrentSweepStakes();
+                    ManageCurrentSweepstakes(firm);
                     break;
                 case "2":
                     firm.sweepstakesManager.InsertSweepstakes(new Sweepstakes(UI.PromptForSweepstakesName()));
@@ -29,6 +29,17 @@ namespace Sweepstakes
             }
         }
 
-        
+        public void ManageCurrentSweepstakes(MarketingFirm firm)
+        {
+            switch (UI.PromptForCurrentSweepstakesManagementChoice)
+            {
+                case "1":
+                    break;
+                case "2":
+                    break;
+                case "3":
+                    break;
+            }
+        }
     }
 }
