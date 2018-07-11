@@ -13,6 +13,5 @@ namespace Sweepstakes
         {
             this.sweepstakesManager = sweepstakesManager;
         }
-
     }
 }
