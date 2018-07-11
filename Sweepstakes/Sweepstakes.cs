@@ -29,7 +29,7 @@ namespace Sweepstakes
 
         public void RegisterContestant(Contestant contestant)
         {
-
+            contestants.Add(contestant.registrationNumber, contestant);
         }
     }
 }
