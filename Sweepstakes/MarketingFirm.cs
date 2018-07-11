@@ -8,7 +8,7 @@ namespace Sweepstakes
 {
     public class MarketingFirm
     {
-        ISweepstakesManager sweepstakesManager;
+        public ISweepstakesManager sweepstakesManager;
         public MarketingFirm(ISweepstakesManager sweepstakesManager)
         {
             this.sweepstakesManager = sweepstakesManager;
