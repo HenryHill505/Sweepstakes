@@ -34,6 +34,7 @@ namespace Sweepstakes
 
         public void RegisterContestant(Contestant contestant)
         {
+            contestant.registrationNumber = contestants.Count + 1;
             contestants.Add(contestant.registrationNumber, contestant);
         }
     }
