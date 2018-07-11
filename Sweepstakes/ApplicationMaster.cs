@@ -31,13 +31,19 @@ namespace Sweepstakes
 
         public void ManageCurrentSweepstakes(MarketingFirm firm)
         {
-            switch (UI.PromptForCurrentSweepstakesManagementChoice)
+            switch (UI.PromptForCurrentSweepstakesManagementChoice())
             {
                 case "1":
+                    //Register New Contestant
+
                     break;
                 case "2":
+                    //Display Contestant Info
                     break;
                 case "3":
+                    // Pick Winner
+                    break;
+                default:
                     break;
             }
         }

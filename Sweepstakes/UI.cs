@@ -8,6 +8,24 @@ namespace Sweepstakes
 {
     public static class UI
     {
+        public static string PromptForContestantFirstName()
+        {
+            Console.WriteLine("Enter the contestant's first name:");
+            return Console.ReadLine();
+        }
+        
+        public static string PromptForContestantLastName()
+        {
+            Console.WriteLine("Enter the contestant's last name:");
+            return Console.ReadLine();
+        }
+
+        public static string PromptForContestantEmail()
+        {
+            Console.WriteLine("Enter the contestant's email address:");
+            return Console.ReadLine();
+        }
+
         public static string PromptForSweepstakesManager()
         {
             Console.WriteLine("Would you like to organize your sweepstakes into a stack or a queue?");
