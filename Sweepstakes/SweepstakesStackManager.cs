@@ -14,5 +14,10 @@ namespace Sweepstakes
         {
             sweepstakesStack.Push(sweepstakes);
         }
+
+        public Sweepstakes GetSweepstakes()
+        {
+            return sweepstakesStack.Last();
+        }
     }
 }

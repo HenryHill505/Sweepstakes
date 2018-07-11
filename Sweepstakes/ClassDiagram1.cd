@@ -24,23 +24,25 @@
   <Class Name="Sweepstakes.Sweepstakes">
     <Position X="9" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAAAEAAAAAAQAAAAIAAA=</HashCode>
+      <HashCode>CAAAAAAAAAAAABAAAAAAAAAAACAEAAAAAAQAAAAIAAA=</HashCode>
       <FileName>Sweepstakes.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sweepstakes.SweepstakesQueueManager" Collapsed="true">
     <Position X="8.25" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAgAAAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SweepstakesQueueManager.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Sweepstakes.SweepstakesStackManager" Collapsed="true">
     <Position X="10" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAQAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SweepstakesStackManager.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Interface Name="Sweepstakes.ISweepstakesManager" Collapsed="true">
     <Position X="11.75" Y="2" Width="1.5" />

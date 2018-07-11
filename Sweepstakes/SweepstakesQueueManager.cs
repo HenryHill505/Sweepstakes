@@ -14,5 +14,10 @@ namespace Sweepstakes
         {
             sweepstakesQueue.Enqueue(sweepstakes);
         }
+
+        public Sweepstakes GetSweepstakes()
+        {
+            return sweepstakesQueue.First();
+        }
     }
 }
