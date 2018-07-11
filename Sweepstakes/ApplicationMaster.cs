@@ -31,17 +31,24 @@ namespace Sweepstakes
 
         public void ManageCurrentSweepstakes(MarketingFirm firm)
         {
+            Sweepstakes sweepstakes = firm.sweepstakesManager.GetSweepstakes();
             switch (UI.PromptForCurrentSweepstakesManagementChoice())
             {
                 case "1":
                     //Register New Contestant
-
+                    Contestant contestant = new Contestant();
+                    contestant.firstName = UI.PromptForContestantFirstName();
+                    contestant.lastName = UI.PromptForContestantLastName();
+                    contestant.emailAddress = UI.PromptForContestantEmail();
+                    sweepstakes.RegisterContestant(contestant);
                     break;
                 case "2":
                     //Display Contestant Info
+
                     break;
                 case "3":
                     // Pick Winner
+                    sweepstakes.PickWinner();
                     break;
                 default:
                     break;
