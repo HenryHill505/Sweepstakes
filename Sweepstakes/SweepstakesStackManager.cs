@@ -8,5 +8,6 @@ namespace Sweepstakes
 {
     class SweepstakesStackManager
     {
+        Stack<Sweepstakes> sweepstakes = new Stack<Sweepstakes>();
     }
 }
