@@ -13,5 +13,11 @@ namespace Sweepstakes
             Console.WriteLine("Would you like to organize your sweepstakes into a stack or a queue?");
             return Console.ReadLine();
         }
+
+        public string PromptForSweepstakesName()
+        {
+            Console.WriteLine("Enter a name for this sweepstakes");
+            return Console.ReadLine();
+        }
     }
 }
