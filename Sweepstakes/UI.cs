@@ -6,17 +6,23 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    public class UI
+    public static class UI
     {
-        public string PromptForSweepstakesManager()
+        public static string PromptForSweepstakesManager()
         {
             Console.WriteLine("Would you like to organize your sweepstakes into a stack or a queue?");
             return Console.ReadLine();
         }
 
-        public string PromptForSweepstakesName()
+        public static string PromptForSweepstakesName()
         {
             Console.WriteLine("Enter a name for this sweepstakes");
+            return Console.ReadLine();
+        }
+
+        public static string PromptForSweepstakesManagementChoice()
+        {
+            Console.WriteLine("1. Manage Current Sweepstakes/n2. Create New Sweepstakes");
             return Console.ReadLine();
         }
     }

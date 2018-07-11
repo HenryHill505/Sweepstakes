@@ -8,6 +8,10 @@ namespace Sweepstakes
 {
     public class ApplicationMaster
     {
-       
+        MarketingFirm firm;
+       public ApplicationMaster(MarketingFirm firm)
+        {
+            this.firm = firm;
+        }
     }
 }

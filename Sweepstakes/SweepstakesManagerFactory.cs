@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    public class SweepstakesManagerFactory
+    public static class SweepstakesManagerFactory
     {
-        public ISweepstakesManager CreateSweepstakesManager(string sweepstakesManager)
+        static public ISweepstakesManager CreateSweepstakesManager(string sweepstakesManager)
         {
-            switch (sweepstakesManager)
+            switch (sweepstakesManager.ToLower())
             {
-                case "Queue":
+                case "queue":
                     return new SweepstakesQueueManager();
-                case "Stack":
+                case "stack":
                     return new SweepstakesStackManager();
                 default:
                     Console.WriteLine("Entered invalid sweepstakes manager type. Enter stack or queue");
