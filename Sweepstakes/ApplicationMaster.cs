@@ -20,6 +20,7 @@ namespace Sweepstakes
 
         public void ManageAllSweepstakes()
         {
+            Console.Clear();
             if (firm.sweepstakesManager.Count > 0)
             {
                 Console.WriteLine($"Current Sweepstakes: {firm.sweepstakesManager.GetSweepstakes().name}");
@@ -34,6 +35,7 @@ namespace Sweepstakes
                     else
                     {
                         Console.WriteLine("There are currently no sweepstakes. Please create a sweepstakes");
+                        Console.ReadLine();
                     }
                     break;
                 case "2":
@@ -42,13 +44,15 @@ namespace Sweepstakes
                 default:
                     break;
             }
-            Console.Clear();
+            
             ManageAllSweepstakes();
         }
 
         public void ManageCurrentSweepstakes(MarketingFirm firm)
         {
+            Console.Clear();
             Sweepstakes sweepstakes = firm.sweepstakesManager.GetSweepstakes();
+            Console.WriteLine(sweepstakes.name);
             switch (UI.PromptForCurrentSweepstakesManagementChoice())
             {
                 case "1":
