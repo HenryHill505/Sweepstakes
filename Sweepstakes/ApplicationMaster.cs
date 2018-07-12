@@ -41,7 +41,6 @@ namespace Sweepstakes
                 default:
                     break;
             }
-            
             ManageAllSweepstakes();
         }
 
@@ -53,13 +52,7 @@ namespace Sweepstakes
             switch (UI.PromptForCurrentSweepstakesManagementChoice())
             {
                 case "1":
-                    {
-                        Contestant contestant = new Contestant();
-                        contestant.firstName = UI.PromptForContestantFirstName();
-                        contestant.lastName = UI.PromptForContestantLastName();
-                        contestant.emailAddress = UI.PromptForContestantEmail();
-                        sweepstakes.RegisterContestant(contestant);
-                    }
+                    RegisterContestant(sweepstakes);
                     ManageCurrentSweepstakes(firm);
                     break;
                 case "2":
@@ -92,6 +85,15 @@ namespace Sweepstakes
             {
                 Console.WriteLine($"Current Sweepstakes: {firm.sweepstakesManager.GetSweepstakes().name}");
             }
+        }
+        
+        public void RegisterContestant(Sweepstakes sweepstakes)
+        {
+            Contestant contestant = new Contestant();
+            contestant.firstName = UI.PromptForContestantFirstName();
+            contestant.lastName = UI.PromptForContestantLastName();
+            contestant.emailAddress = UI.PromptForContestantEmail();
+            sweepstakes.RegisterContestant(contestant);
         }
     }
 }
