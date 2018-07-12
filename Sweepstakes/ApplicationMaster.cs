@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Net;
+using System.Net.Mail;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,9 +11,11 @@ namespace Sweepstakes
     public class ApplicationMaster
     {
         MarketingFirm firm;
-       public ApplicationMaster(MarketingFirm firm)
+        SmtpClient smtp;
+       public ApplicationMaster(SmtpClient smtp, MarketingFirm firm)
         {
             this.firm = firm;
+            this.smtp = smtp;
         }
 
         public void ManageAllSweepstakes()
