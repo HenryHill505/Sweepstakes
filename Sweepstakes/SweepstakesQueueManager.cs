@@ -27,5 +27,10 @@ namespace Sweepstakes
         {
             return sweepstakesQueue.First();
         }
+
+        public void EndSweepstakes()
+        {
+            sweepstakesQueue.Dequeue();
+        }
     }
 }
