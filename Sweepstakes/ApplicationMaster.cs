@@ -56,12 +56,7 @@ namespace Sweepstakes
                     ManageCurrentSweepstakes(firm);
                     break;
                 case "2":
-                    Console.WriteLine("Registered Contestants");
-                    foreach (Contestant contestant in sweepstakes.contestants.Values)
-                    {
-                        sweepstakes.PrintContestantInfo(contestant);
-                    }
-                    Console.ReadLine();
+                    PrintRegisteredContestants(sweepstakes);
                     ManageCurrentSweepstakes(firm);
                     break;
                 case "3":
@@ -85,6 +80,16 @@ namespace Sweepstakes
             {
                 Console.WriteLine($"Current Sweepstakes: {firm.sweepstakesManager.GetSweepstakes().name}");
             }
+        }
+
+        public void PrintRegisteredContestants(Sweepstakes sweepstakes)
+        {
+            Console.WriteLine("Registered Contestants");
+            foreach (Contestant contestant in sweepstakes.contestants.Values)
+            {
+                sweepstakes.PrintContestantInfo(contestant);
+            }
+            Console.ReadLine();
         }
         
         public void RegisterContestant(Sweepstakes sweepstakes)
