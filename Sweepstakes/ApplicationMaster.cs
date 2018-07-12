@@ -68,6 +68,7 @@ namespace Sweepstakes
                     break;
                 case "2":
                     //Display Contestant Info
+                    Console.WriteLine("Registered Contestants");
                     foreach (Contestant contestant in sweepstakes.contestants.Values)
                     {
                         sweepstakes.PrintContestantInfo(contestant);
@@ -81,7 +82,12 @@ namespace Sweepstakes
                     Console.ReadLine();
                     firm.sweepstakesManager.EndSweepstakes();
                     break;
+                case "4":
+                    break;
                 default:
+                    Console.WriteLine("Invalid entry. Enter a number corresponding to an option");
+                    Console.ReadLine();
+                    ManageCurrentSweepstakes(firm);
                     break;
             }
         }

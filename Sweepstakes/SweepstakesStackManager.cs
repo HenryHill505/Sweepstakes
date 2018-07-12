@@ -8,7 +8,12 @@ namespace Sweepstakes
 {
     class SweepstakesStackManager : ISweepstakesManager
     {
-        Stack<Sweepstakes> sweepstakesStack = new Stack<Sweepstakes>();
+        Stack<Sweepstakes> sweepstakesStack;
+
+        public SweepstakesStackManager()
+        {
+            sweepstakesStack = new Stack<Sweepstakes>();
+        }
 
         public int Count
         {
