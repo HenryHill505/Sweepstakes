@@ -29,7 +29,7 @@ namespace Sweepstakes
 
         public void PrintContestantInfo(Contestant contestant)
         {
-            Console.WriteLine($"Registration number: {contestant.registrationNumber}\nFirst Name: {contestant.firstName}\nLast Name: {contestant.lastName}\nEmail: {contestant.emailAddress}");
+            Console.WriteLine($"{contestant.registrationNumber} {contestant.firstName} {contestant.lastName} {contestant.emailAddress}");
         }
 
         public void RegisterContestant(Contestant contestant)
