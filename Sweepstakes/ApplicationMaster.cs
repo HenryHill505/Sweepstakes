@@ -21,10 +21,7 @@ namespace Sweepstakes
         public void ManageAllSweepstakes()
         {
             Console.Clear();
-            if (firm.sweepstakesManager.Count > 0)
-            {
-                Console.WriteLine($"Current Sweepstakes: {firm.sweepstakesManager.GetSweepstakes().name}");
-            }
+            PrintCurrentSweepstakes();
             switch (UI.PromptForAllSweepstakesManagementChoice())
             {
                 case "1":
@@ -86,6 +83,14 @@ namespace Sweepstakes
                     Console.ReadLine();
                     ManageCurrentSweepstakes(firm);
                     break;
+            }
+        }
+
+        public void PrintCurrentSweepstakes()
+        {
+            if (firm.sweepstakesManager.Count > 0)
+            {
+                Console.WriteLine($"Current Sweepstakes: {firm.sweepstakesManager.GetSweepstakes().name}");
             }
         }
     }
