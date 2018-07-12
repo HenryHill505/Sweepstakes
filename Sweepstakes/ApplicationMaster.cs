@@ -56,7 +56,6 @@ namespace Sweepstakes
             switch (UI.PromptForCurrentSweepstakesManagementChoice())
             {
                 case "1":
-                    //Register New Contestant
                     {
                         Contestant contestant = new Contestant();
                         contestant.firstName = UI.PromptForContestantFirstName();
@@ -67,7 +66,6 @@ namespace Sweepstakes
                     ManageCurrentSweepstakes(firm);
                     break;
                 case "2":
-                    //Display Contestant Info
                     Console.WriteLine("Registered Contestants");
                     foreach (Contestant contestant in sweepstakes.contestants.Values)
                     {
@@ -77,7 +75,6 @@ namespace Sweepstakes
                     ManageCurrentSweepstakes(firm);
                     break;
                 case "3":
-                    // Pick Winner
                     Console.WriteLine(sweepstakes.PickWinner(smtp) + " is the winner.");
                     Console.ReadLine();
                     firm.sweepstakesManager.EndSweepstakes();
