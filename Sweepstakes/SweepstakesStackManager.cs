@@ -18,6 +18,11 @@ namespace Sweepstakes
             }
         }
 
+        public void EndSweepstakes()
+        {
+            sweepstakesStack.Pop();
+        }
+
         public void InsertSweepstakes(Sweepstakes sweepstakes)
         {
             sweepstakesStack.Push(sweepstakes);
@@ -26,11 +31,6 @@ namespace Sweepstakes
         public Sweepstakes GetSweepstakes()
         {
             return sweepstakesStack.First();
-        }
-
-        public void EndSweepstakes()
-        {
-            sweepstakesStack.Pop();
         }
     }
 }

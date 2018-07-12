@@ -8,6 +8,7 @@ namespace Sweepstakes
 {
     public interface ISweepstakesManager
     {
+        void EndSweepstakes();
         void InsertSweepstakes(Sweepstakes sweepstakes);
         Sweepstakes GetSweepstakes();
         int Count
