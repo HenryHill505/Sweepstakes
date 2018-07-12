@@ -16,6 +16,10 @@ namespace Sweepstakes
 
         public void ManageAllSweepstakes()
         {
+            if (firm.sweepstakesManager.Count > 0)
+            {
+                Console.WriteLine($"Current Sweepstakes: {firm.sweepstakesManager.GetSweepstakes().name}");
+            }
             switch (UI.PromptForAllSweepstakesManagementChoice())
             {
                 case "1":

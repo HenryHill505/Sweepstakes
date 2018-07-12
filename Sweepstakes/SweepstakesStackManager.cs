@@ -25,7 +25,7 @@ namespace Sweepstakes
 
         public Sweepstakes GetSweepstakes()
         {
-            return sweepstakesStack.Last();
+            return sweepstakesStack.First();
         }
     }
 }
