@@ -35,11 +35,11 @@ namespace Sweepstakes
             Console.WriteLine($"{contestant.registrationNumber} {contestant.firstName} {contestant.lastName} {contestant.emailAddress}");
         }
 
-        public void NotifyContestants(int winnerNumber, string winnerName)
+        public void NotifyContestants(SmtpClient smtp, int winnerNumber, string winnerName)
         {
             foreach(Contestant contestant in contestants.Values)
             {
-                contestant.Notify(winnerNumber, winnerName);
+                contestant.Notify(smtp, winnerNumber, winnerName);
             }
         }
 
