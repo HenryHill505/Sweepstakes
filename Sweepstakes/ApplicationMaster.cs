@@ -42,6 +42,7 @@ namespace Sweepstakes
                 default:
                     break;
             }
+            Console.Clear();
             ManageAllSweepstakes();
         }
 
