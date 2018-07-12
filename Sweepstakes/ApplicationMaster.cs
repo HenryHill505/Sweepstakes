@@ -65,7 +65,7 @@ namespace Sweepstakes
                     break;
                 case "3":
                     // Pick Winner
-                    Console.WriteLine(sweepstakes.PickWinner());
+                    Console.WriteLine(sweepstakes.PickWinner() + " is the winner.");
                     Console.ReadLine();
                     firm.sweepstakesManager.EndSweepstakes();
                     break;

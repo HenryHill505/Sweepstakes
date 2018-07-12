@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Net;
+using System.Net.Mail;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,13 +17,19 @@ namespace Sweepstakes
 
         public void Notify(int winnerNumber, string winnerName)
         {
+            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
+            NetworkCredential credentials = new NetworkCredential("Smtptest505","Testpassword505");
+            smtp.Credentials = credentials;
+            smtp.EnableSsl = true;
             if (winnerNumber == registrationNumber)
             {
-                Console.WriteLine($"Congratulations, {winnerName}. You won the sweepstakes!");
+                smtp.Send("Smtptest505@gmail.com", emailAddress, "Sweepstakes results", $"Congratulations, {winnerName}. You won the sweepstakes!");
+                //Console.WriteLine($"Congratulations, {winnerName}. You won the sweepstakes!");
             }
             else
             {
-                Console.WriteLine($"{firstName} {lastName}, you did not win the sweepstakes. {winnerName} won, not you. Better luck next time!");
+                //Console.WriteLine($"{firstName} {lastName}, you did not win the sweepstakes. {winnerName} won, not you. Better luck next time!");
+                smtp.Send("Smtptest505@gmail.com", emailAddress, "Sweepstakes results", $"{firstName} {lastName}, you did not win the sweepstakes. {winnerName} won, not you. Better luck next time!");
             }
         }
     }
