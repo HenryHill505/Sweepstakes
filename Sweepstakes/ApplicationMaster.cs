@@ -60,6 +60,7 @@ namespace Sweepstakes
                         contestant.emailAddress = UI.PromptForContestantEmail();
                         sweepstakes.RegisterContestant(contestant);
                     }
+                    ManageCurrentSweepstakes(firm);
                     break;
                 case "2":
                     //Display Contestant Info
@@ -67,6 +68,8 @@ namespace Sweepstakes
                     {
                         sweepstakes.PrintContestantInfo(contestant);
                     }
+                    Console.ReadLine();
+                    ManageCurrentSweepstakes(firm);
                     break;
                 case "3":
                     // Pick Winner

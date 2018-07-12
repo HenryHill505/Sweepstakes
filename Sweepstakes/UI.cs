@@ -46,7 +46,8 @@ namespace Sweepstakes
 
         public static string PromptForCurrentSweepstakesManagementChoice()
         {
-            Console.WriteLine("1. Register New Contestant\n2. DisplayContestantInfo\n3. Pick Winner");
+            Console.Clear();
+            Console.WriteLine("1. Register New Contestant\n2. DisplayContestantInfo\n3. Pick Winner\n4. Back");
             return Console.ReadLine();
         }
     }
