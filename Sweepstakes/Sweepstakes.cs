@@ -24,7 +24,7 @@ namespace Sweepstakes
             int contestantCount = contestants.Count;
             int winnerRegistrationNumber = randomizer.Next(1, contestantCount + 1);
             string winnerName = $"{contestants[winnerRegistrationNumber].firstName} {contestants[winnerRegistrationNumber].lastName}";
-            NotifyContestants();
+            NotifyContestants(winnerRegistrationNumber, winnerName);
             return winnerName;
         }
 
@@ -33,11 +33,11 @@ namespace Sweepstakes
             Console.WriteLine($"{contestant.registrationNumber} {contestant.firstName} {contestant.lastName} {contestant.emailAddress}");
         }
 
-        public void NotifyContestants()
+        public void NotifyContestants(int winnerNumber, string winnerName)
         {
             foreach(Contestant contestant in contestants.Values)
             {
-                contestant.Notify();
+                contestant.Notify(winnerNumber, winnerName);
             }
         }
 
