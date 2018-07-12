@@ -67,6 +67,7 @@ namespace Sweepstakes
                     // Pick Winner
                     Console.WriteLine(sweepstakes.PickWinner());
                     Console.ReadLine();
+                    firm.sweepstakesManager.EndSweepstakes();
                     break;
                 default:
                     break;

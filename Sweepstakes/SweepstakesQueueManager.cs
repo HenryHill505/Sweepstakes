@@ -18,6 +18,11 @@ namespace Sweepstakes
             }
         }
 
+        public void EndSweepstakes()
+        {
+            sweepstakesQueue.Dequeue();
+        }
+
         public void InsertSweepstakes(Sweepstakes sweepstakes)
         {
             sweepstakesQueue.Enqueue(sweepstakes);
@@ -26,11 +31,6 @@ namespace Sweepstakes
         public Sweepstakes GetSweepstakes()
         {
             return sweepstakesQueue.First();
-        }
-
-        public void EndSweepstakes()
-        {
-            sweepstakesQueue.Dequeue();
         }
     }
 }
